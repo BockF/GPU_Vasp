@@ -65,7 +65,7 @@ def plot_usage(Data, num_gpus, max_mem, GPUs):
     fig, axs = plt.subplots()
     for x in range(num_gpus):
         axs.plot(X, Data[:,x])
-    axs.plot(X,y_max, '-r')
+    axs.plot(X,y_max, '--r')
     axs.set(xlabel = "Time [s]", ylabel = "GPU-Usage [MByte]", ylim = (0, int(float(max_mem) * 1.05)))
     GPUs.append("Maximum RAM / GPU")
     axs.legend(GPUs)
